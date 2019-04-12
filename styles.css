@@ -21,3 +21,7 @@ ol, ul {
 li {
     margin-bottom: 2rem;
 }
+
+.navbar-brand a {
+    color: #896322;
+}
