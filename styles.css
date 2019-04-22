@@ -21,3 +21,13 @@ ol, ul {
 li {
     margin-bottom: 2rem;
 }
+
+.micro {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+mark {
+    background-color: #ffc107;
+    color: red;
+}
