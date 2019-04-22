@@ -9,8 +9,6 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="google-code-prettify/prettify.css" rel="stylesheet"> -->
-    <!-- <link href="prettify/css/prettify.css" type="text/css"/> -->
     <link rel="stylesheet" href="styles.css">
     <title>Guide</title>
 </head>
@@ -379,39 +377,40 @@
                 <li> Сначала заполнить для каждого филиала следующий шаблон, а точнее - заполнить данные выделенные красным текстом.</li>
                 <li> После чего, каждому филиалу добавить на страницу (в админке) уже заполненный его шаблон микроразметки.</li>
             </ul>
-                <pre class="prettyprint linenums">
-                    &lt;script type="application/ld+json">
+                <pre class="micro bg-dark text-light">
+                        
+    &lt;script type="application/ld+json"&gt;
+    {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "url": <mark>"URL ФИЛИАЛА (пример: https://oldboybarbershop.com/spb/ozerki-toreza)</mark>",
+            "name" : "OldBoy Barbershop <mark>ГОРОД</mark>",
+            "brand" : "OldBoy",
+            "logo": "https://oldboybarbershop.com/sites/all/themes/oldboy8/dist/img/logo.svg",
+            "telephone": "<mark>ТЕЛЕФОН(пример формата: +7(962)699-69-91)</mark>",
+            "email" : "<mark>ЭЛЕКТРОННАЯ ПОЧТА</mark>",
+            "branchOf" : "OldBoy",
+            "address": 
+                {
+                        "@type" : "PostalAddress",
+                        "streetAddress" : "<mark>АДРЕС</mark>",
+                        "addressLocality" : "<mark>ГОРОД</mark>",
+                        "addressCountry" : "<mark>СТРАНА</mark>"
+                },
+            "openingHoursSpecification" :
+                    {
+                "@type" : "OpeningHoursSpecification",
+                    "dayOfWeek": 
                         {
-                        "@context": "http://schema.org",
-                        "@type": "LocalBusiness",
-                        "url": "URL ФИЛИАЛА (пример: https://oldboybarbershop.com/spb/ozerki-toreza)",
-                        "name" : "OldBoy Barbershop ГОРОД",
-                        "brand" : "OldBoy",
-                        "logo": "https://oldboybarbershop.com/sites/all/themes/oldboy8/dist/img/logo.svg",
-                        "telephone": "ТЕЛЕФОН(пример формата: +7(962)699-69-91)",
-                        "email" : "ЭЛЕКТРОННАЯ ПОЧТА",
-                        "branchOf" : "OldBoy",
-                        "address": 
-                            {
-                                    "@type" : "PostalAddress",
-                                    "streetAddress" : "АДРЕС",
-                                    "addressLocality" : "ГОРОД",
-                                    "addressCountry" : "СТРАНА"
-                            },
-                        "openingHoursSpecification" :
-                            {
-                            "@type" : "OpeningHoursSpecification",
-                                "dayOfWeek": 
-                                {
                             "@type" : "DayOfWeek",
-                                "name" : "ПН-ВС"
-                                    },
-                            "opens" : "00:00",
-                            "closes" : "00:00"
-                            }
-                        }
-                    &lt;/script>
-                </pre>
+                            "name" : "<mark>ПН-ВС"</mark>
+                                },
+                                    "opens" : "<mark>00:00</mark>",
+                                    "closes" : "<mark>00:00</mark>"
+                                }
+    }
+    &lt;/script&gt;
+            </pre>
         </section>
     </main>
 
@@ -420,7 +419,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="prettify/js/prettify.js"></script>  
-    <script src="prettify/js/prettify-run.js"></script>
 </body>
 </html>
